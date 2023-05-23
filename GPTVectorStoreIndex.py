@@ -54,10 +54,12 @@ load_dotenv()  # take environment variables from .env.
 
 # print(f"creating index")
 
+# sequentially go through each retrieved Node. Use a Question-Answer Prompt for the first Node, 
+# and use a Refine Prompt for subsequent Nodes. Make a separate LLM call per Node.
+
 def simple_llama(query):
     try:
         storage_context = StorageContext.from_defaults(persist_dir='./storage')
-
         index = load_index_from_storage(storage_context)
     except:
         directory_path = 'data'
@@ -66,11 +68,6 @@ def simple_llama(query):
 
         index.storage_context.persist()
 
-    # rebuild storage context
-    # storage_context = StorageContext.from_defaults(persist_dir='./storage')
-
-    # load index
-    # index = load_index_from_storage(storage_context)
 
     # llama by default uses text-davinci-003
     query_engine = index.as_query_engine()
