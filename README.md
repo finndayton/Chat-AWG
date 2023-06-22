@@ -10,5 +10,5 @@ Team Odin Hacking For Defense
 4. Add your OPENAI API key to a new file called .env as follows: OPENAI_API_KEY="sk-abc"
 5. Run "streamlit run frontend.py"
 
-![Alt Text](ezgif.com-gif-to-mp4.gif)
+![Alt Text](demo.gif)
 

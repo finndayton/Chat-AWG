@@ -11,35 +11,6 @@ from GPTVectorStoreIndex import simple_llama
 st.title('Chat AWG')
 
 # Create a file uploader widget
-# file_uploader = st.file_uploader("First, Upload Your Files as PDFs")
-
-# # Get the file names of all uploaded files
-# file_names = []
-# if file_uploader:
-#   file_names.append(file_uploader.name)
-
-# # Check if the file names already exist
-# for file_name in file_names:
-#   if os.path.exists(file_name):
-#     st.warning("File name already exists.")
-#   else:
-#     # Save the contents of the uploaded PDF to a file
-#     file_path = os.path.join('data', file_name)
-#     with open(file_path, "wb") as f:
-#       f.write(file_uploader.read())
-
-#     st.success("PDF saved successfully!")
-
-# # Display the file names of all uploaded files
-# # st.write("File names:", file_names)
-
-
-# # search bar for queries 
-
-# st.write(response)
-
-
-# Create a file uploader widget
 file_uploader = st.file_uploader("First, Upload Your Files as PDFs")
 
 file_names = []
